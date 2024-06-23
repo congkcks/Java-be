@@ -1,5 +1,8 @@
-# Java Spring Starter template (update)
-Template này được sử dụng cho series Java Spring MVC (dự án laptopshop) của tác giả Hỏi Dân IT (Eric)
+# Java Spring MVC (FINAL PROJECT)
+Full source code series Java Spring MVC (dự án laptopshop) của tác giả Hỏi Dân IT (Eric)
+
+===
+Môi trường chạy dự án: Java 17
 
 ## Về tác giả
 Mọi thông tin về Tác giả Hỏi Dân IT, các bạn có thể tìm kiếm tại đây:
