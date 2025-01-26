@@ -54,6 +54,9 @@ public class ProductController {
         Pageable pageable = PageRequest.of(page - 1, 5);
         Page<Product> prs = this.productService.fetchProducts(pageable);
         List<Product> listProducts = prs.getContent();
+        if (listProducts.isEmpty()) {
+            return "redirect:/admin/product/create";
+        }
         model.addAttribute("products", listProducts);
 
         model.addAttribute("currentPage", page);

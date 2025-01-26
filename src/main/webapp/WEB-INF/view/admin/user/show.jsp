@@ -76,7 +76,16 @@
                                                         <span aria-hidden="true">&laquo;</span>
                                                     </a>
                                                 </li>
-                                                <c:forEach begin="0" end="${totalPages - 1}" varStatus="loop">
+                                                <!-- <c:forEach begin="0" end="${totalPages - 1}" varStatus="loop">
+                                                    <li class="page-item">
+                                                        <a class="${(loop.index + 1) eq currentPage ? 'active page-link' : 'page-link'}"
+                                                            href="/admin/user?page=${loop.index + 1}">
+                                                            ${loop.index + 1}
+                                                        </a>
+                                                    </li>
+                                                </c:forEach> -->
+                                                <c:forEach begin="0" end="${totalPages > 0 ? totalPages - 1 : 0}"
+                                                    varStatus="loop">
                                                     <li class="page-item">
                                                         <a class="${(loop.index + 1) eq currentPage ? 'active page-link' : 'page-link'}"
                                                             href="/admin/user?page=${loop.index + 1}">
@@ -84,6 +93,7 @@
                                                         </a>
                                                     </li>
                                                 </c:forEach>
+
                                                 <li class="page-item">
                                                     <a class="${totalPages eq currentPage ? 'disabled page-link' : 'page-link'}"
                                                         href="/admin/user?page=${currentPage + 1}" aria-label="Next">
